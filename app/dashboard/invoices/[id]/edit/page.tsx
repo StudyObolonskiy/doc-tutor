@@ -1,9 +1,10 @@
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
-import Form from '@/app/ui/invoices/edit-form';
+import Form from '@/app/ui/invoices/invoice-form';
 import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchCustomers, fetchInvoiceById } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
+import { editInvoice } from '@/app/lib/actions';
 
 export default async function Page({ params }: { params: { id: string } }) {
   const id = params.id;
